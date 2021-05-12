@@ -6,25 +6,25 @@
 * в остальных случаях: <d> дн <h> час <m> мин <s> сек.
 """
 
-duration = int(input("Enter a number: "))
-
-if duration <= 59:
-    print(f"{duration} sec")
-elif 60 <= duration <= 3599:
-    m = duration // 60
-    s = duration % 60
-    print(f"{m} min {s} sec")
-elif 3600 <= duration <= 86399:
-    h = duration // 60 // 60
-    m = duration // 60 % 60
-    s = duration % 60
-    print(f"{h} hour {m} min {s} sec")
-elif 86400 <= duration:
-    d = duration // 60 // 60 // 24
-    h = duration // 60 // 60 % 24
-    m = duration // 60 % 60
-    s = duration % 60
-    print(f"{d} days {h} hour {m} min {s} sec")
+# duration = int(input("Enter a number: "))
+#
+# if duration <= 59:
+#     print(f"{duration} sec")
+# elif 60 <= duration <= 3599:
+#     m = duration // 60
+#     s = duration % 60
+#     print(f"{m} min {s} sec")
+# elif 3600 <= duration <= 86399:
+#     h = duration // 60 // 60
+#     m = duration // 60 % 60
+#     s = duration % 60
+#     print(f"{h} hour {m} min {s} sec")
+# elif 86400 <= duration:
+#     d = duration // 60 // 60 // 24
+#     h = duration // 60 // 60 % 24
+#     m = duration // 60 % 60
+#     s = duration % 60
+#     print(f"{d} days {h} hour {m} min {s} sec")
 
 
 """
@@ -50,6 +50,7 @@ def sum_digits(number):
 Решение без "+17"
 """
 my_arr = []
+sum_arr = 0
 
 for num in range(1, 1001, 2):
     num = num ** 3
@@ -57,7 +58,11 @@ for num in range(1, 1001, 2):
     if result % 7 == 0:
         my_arr.append(num)
 
-print(f"without 'plus 17': {my_arr}")
+for i in my_arr:
+    sum_arr = sum_arr + i
+
+print(f"Without 'plus 17': {my_arr}")
+print(f"The sum of all elements in 'my_arr': {sum_arr}")
 
 
 """
@@ -74,7 +79,7 @@ for num in range(1, 1001, 2):
         if result_x % 7 == 0:
             my_arr.append(num)
 
-print(f"with 'plus 17': {my_arr}")
+print(f"With 'plus 17': {my_arr}")
 
 
 """
@@ -83,13 +88,13 @@ print(f"with 'plus 17': {my_arr}")
 Вывести все склонения для проверки.
 """
 
-user_number = int(input("Enter a number from 1 to 20: "))
-
-if user_number == 1:
-    last = ""
-elif 1 < user_number < 5:
-    last = "а"
-else:
-    last = 'ов'
-
-print(f"{user_number} процент{last}")
+# user_number = int(input("Enter a number from 1 to 20: "))
+#
+# if user_number == 1:
+#     last = ""
+# elif 1 < user_number < 5:
+#     last = "а"
+# else:
+#     last = 'ов'
+#
+# print(f"{user_number} процент{last}")
