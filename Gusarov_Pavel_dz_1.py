@@ -6,25 +6,25 @@
 * в остальных случаях: <d> дн <h> час <m> мин <s> сек.
 """
 
-# duration = int(input("Enter a number: "))
-#
-# if duration <= 59:
-#     print(f"{duration} sec")
-# elif 60 <= duration <= 3599:
-#     m = duration // 60
-#     s = duration % 60
-#     print(f"{m} min {s} sec")
-# elif 3600 <= duration <= 86399:
-#     h = duration // 60 // 60
-#     m = duration // 60 % 60
-#     s = duration % 60
-#     print(f"{h} hour {m} min {s} sec")
-# elif 86400 <= duration:
-#     d = duration // 60 // 60 // 24
-#     h = duration // 60 // 60 % 24
-#     m = duration // 60 % 60
-#     s = duration % 60
-#     print(f"{d} days {h} hour {m} min {s} sec")
+duration = int(input("Enter a number: "))
+
+if duration <= 59:
+    print(f"{duration} sec")
+elif 60 <= duration <= 3599:
+    m = duration // 60
+    s = duration % 60
+    print(f"{m} min {s} sec")
+elif 3600 <= duration <= 86399:
+    h = duration // 60 // 60
+    m = duration // 60 % 60
+    s = duration % 60
+    print(f"{h} hour {m} min {s} sec")
+elif 86400 <= duration:
+    d = duration // 60 // 60 // 24
+    h = duration // 60 // 60 % 24
+    m = duration // 60 % 60
+    s = duration % 60
+    print(f"{d} days {h} hour {m} min {s} sec")
 
 
 """
@@ -88,13 +88,13 @@ print(f"With 'plus 17': {my_arr}")
 Вывести все склонения для проверки.
 """
 
-# user_number = int(input("Enter a number from 1 to 20: "))
-#
-# if user_number == 1:
-#     last = ""
-# elif 1 < user_number < 5:
-#     last = "а"
-# else:
-#     last = 'ов'
-#
-# print(f"{user_number} процент{last}")
+user_number = int(input("Enter a number from 1 to 20: "))
+
+if user_number == 1:
+    last = ""
+elif 1 < user_number < 5:
+    last = "а"
+else:
+    last = 'ов'
+
+print(f"{user_number} процент{last}")
